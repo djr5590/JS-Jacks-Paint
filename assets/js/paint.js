@@ -3,15 +3,18 @@ function configureListeners() {
 
      for (var i = 0; i < images.length; i++) {        
         document.getElementById(images[i].id).addEventListener('mouseover', addOpacity, false)        
-        document.getElementById(images[i].id).addEventListener('mouseout', removeOpacity, false)  
-        document.getElementById(images[i].id).addEventListener('mouseover', updatePrice, false)      
+        document.getElementById(images[i].id).addEventListener('mouseout', removeOpacity, false)        
+        // document.getElementById(images[i].id).addEventListener('mouseover', updatePrice, false)
     } 
 }
+
 
 function addOpacity(event) {
     if (!this.classList.contains('dim')){
         this.classList.add('dim')
-    }    
+    }   
+    // let element = document.getElementById("color")
+    // element.textContent = "hello"
     getProductInfo(event.target.id);     
 }
 
@@ -97,3 +100,4 @@ function getProductInfo(partNumber) {
     }
     
 }
+
